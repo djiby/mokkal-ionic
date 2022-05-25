@@ -1,0 +1,12 @@
+
+<ion-list>
+  <ion-list-header>{{xassaid.name}}</ion-list-header>
+  <ion-item button>
+    A Mémoriser
+    <ion-checkbox slot="end" [checked]="xassaid.isToLearn" color="success" (ionChange)="isToLearn($event)"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    Déjà Mémoriser
+    <ion-checkbox slot="end" [checked]="xassaid.isLearned" color="success" (ionChange)="isLearned($event)"></ion-checkbox>
+  </ion-item>
+</ion-list>

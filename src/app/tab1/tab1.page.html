@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-item>
+      <ion-avatar slot="end">
+        <img [src]="picture">
+      </ion-avatar>
+      <p>Le Catalogue</p>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background-image">
+
+  <ion-searchbar #search placeholder="Rechercher" debounce="500" (ionChange)="filter($event)"></ion-searchbar>
+
+  <ion-list>
+    <ion-card *ngFor="let xassaid of searchTerm" class="app">
+      <ion-item>
+        <ion-icon name="ellipsis-vertical" (click)="openPopover(xassaid)"></ion-icon>
+        <p class="xa">{{xassaid.name}}</p>
+        <ion-badge slot="end">
+          <ion-grid>
+            <ion-row class="co">{{xassaid.countBeuyite}}</ion-row>
+            <ion-row>beuyits</ion-row>
+          </ion-grid>
+        </ion-badge>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

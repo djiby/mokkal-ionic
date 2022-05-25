@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-item>
+      <ion-avatar slot="end">
+        <img [src]="picture">
+      </ion-avatar>
+      <p>Ma Bibliothèque</p>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background-image">
+
+  <ion-searchbar #search placeholder="Rechercher" debounce="500" (ionChange)="filter($event)"></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let xassaid of searchTerm">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-row><ion-label>{{xassaid.name}}</ion-label></ion-row>
+            <ion-row><div>{{xassaid.countLearned}} appris sur {{xassaid.countBeuyite}}</div></ion-row>
+            <ion-row><ion-progress-bar [value]="xassaid.countLearned/xassaid.countBeuyite"></ion-progress-bar></ion-row>
+          </ion-col>
+          <ion-icon name="eye-sharp" (click)="learnXassaid(xassaid)"></ion-icon>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

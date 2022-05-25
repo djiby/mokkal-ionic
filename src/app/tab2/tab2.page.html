@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-item>
+      <ion-avatar slot="end">
+        <img [src]="picture" class="picture">
+      </ion-avatar>
+      <p class="dash">Dashboard</p>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background-image">
+
+  <p class="label">Ma progression</p>
+  <ion-card class="pro">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-row><p class="sta">Xassaîds</p></ion-row>
+          <ion-row>{{sumXassaidIsLearned}} appris sur {{sumXassaid}}</ion-row>
+          <ion-row><ion-progress-bar [value]="percentXassaidIsLearned"></ion-progress-bar></ion-row>
+          <ion-row><p class="sta" style="margin-top: 20px;">Beuyits</p></ion-row>
+          <ion-row>{{sunBeuyiteIsLearned}} appris sur {{sumBeuyite}}</ion-row>
+          <ion-row><ion-progress-bar [value]="percentBeuyiteIsLearned"></ion-progress-bar></ion-row>
+        </ion-col>
+        <ion-col>
+          <img src="../../assets/back.png" class="back" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <p class="label">Continuer l'apprentissage</p>
+  <ion-card class="app">
+    <ion-grid>
+      <ion-row><img [src]="pictureXassaidToLearn" style="margin-top: 12%;"/></ion-row>
+      <ion-row><p class="sta" style="margin-top: 40px;">{{xassaidToLearn}}</p></ion-row>
+      <ion-row>{{countBeuyiteLearned}} appris sur {{countBeuyiteToLearn}}</ion-row>
+      <ion-row><ion-progress-bar value=".4" color="success" style="width: 400px;"></ion-progress-bar></ion-row>
+    </ion-grid>
+  </ion-card>
+
+</ion-content>

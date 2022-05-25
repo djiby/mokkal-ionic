@@ -1,0 +1,11 @@
+<ion-content class="background-image">
+  <p>Créer un profile</p>
+
+  <ion-avatar (click)="takePicture()">
+    <img [src]="picture">
+  </ion-avatar>
+
+  <ion-text>Saisissez votre nom</ion-text>
+  <ion-input [(ngModel)]="name" ></ion-input>
+  <ion-button color="success" (click)="next()">Continuer</ion-button>
+</ion-content>

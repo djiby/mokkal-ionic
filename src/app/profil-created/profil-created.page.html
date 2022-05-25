@@ -1,0 +1,13 @@
+<ion-content class="background-image">
+  <p>Profile créé</p>
+
+  <ion-avatar>
+    <img [src]="picture">
+  </ion-avatar>
+
+  <ion-text>{{name}}</ion-text>
+  <div>
+    <ion-button color="success" [routerLink]="['/tabs']">Terminer</ion-button>
+  </div>
+  
+</ion-content>

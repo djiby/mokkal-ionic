@@ -1,0 +1,61 @@
+.background-image{
+    --background: url(../../assets/background.png) 0 0/100% 100% no-repeat;
+}
+
+ion-toolbar {
+    --ion-background-color: linear-gradient(to right,#BDCFA6 0%, #CFDDE2 50%, #A3BDC3 100%) !important;
+}
+
+p{
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 20%;
+    margin-left: 5%;
+}
+
+ion-item{
+    --background: none;
+    --border-color: darkcyan;
+}
+
+ion-avatar{
+    height: 50px;
+    width: 50px;
+}
+
+img{
+    margin-top: 50%;
+}
+
+.sc-ion-searchbar-md-h {
+    --background: none;
+}
+
+ion-item{
+    --background: none;  
+}
+
+ion-list{
+    background: none;  
+}
+
+ion-progress-bar{
+    height: 8px;
+    margin-top: 10px;
+}
+
+ion-label{
+    font-weight: bold;
+}
+
+div{
+    color:darkcyan;
+    font-size: 14px;
+    margin-top: 5%;
+}
+
+ion-icon{
+    margin-top: 2%;
+    height: 20px;
+    width: 20px;
+}

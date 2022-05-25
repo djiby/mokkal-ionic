@@ -1,0 +1,17 @@
+<ion-content class="background-image">
+  <p>Lesquels voulez vous mémoriser ?</p>
+  <ion-searchbar #search placeholder="Rechercher" debounce="500" (ionChange)="filter($event)"></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let xassaid of searchTerm">
+      <ion-label>{{xassaid.name}}</ion-label>
+      <ion-checkbox *ngIf="!xassaid.isLearned" slot="end" [(ngModel)]="xassaid.isToLearn" color="success" (ionChange)="isToLearn(xassaid, $event)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button color="success" (click)="next()">Continuer</ion-button>
+</ion-footer>
+

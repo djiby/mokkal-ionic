@@ -1,0 +1,51 @@
+.background-image{
+    --background: url(../../assets/background.png) 0 0/100% 100% no-repeat;
+}
+
+ion-toolbar {
+    --ion-background-color: linear-gradient(to right,#BDCFA6 0%, #CFDDE2 50%, #A3BDC3 100%) !important;
+}
+
+p{
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+ion-avatar{
+    height: 50px;
+    width: 50px;
+}
+
+img{
+    margin-top: 25px;
+}
+
+ion-item{
+    --background: none;
+    --border-color: darkcyan;
+}
+
+.card{
+    background: #A5C9CB;
+    height: 100px;
+}
+
+.down{
+    width: 100%;
+    height: 80%;
+}
+
+div{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.check{
+    margin-left: 80%;
+    width: 30px;
+    height: 30px;
+    color: forestgreen;
+}
